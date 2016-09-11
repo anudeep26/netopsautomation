@@ -178,7 +178,6 @@ if __name__ == '__main__':
     result = parser.parse_args()
     dfile = open(result.devfile,'r')
     nthread = 1
-    iterations=5
     nus = 5
     wait = 5
     threadfun = []
@@ -190,7 +189,7 @@ if __name__ == '__main__':
     dfile.close()
     print nes
     for ne in nes:
-        thread = ne+str(iteration)
+        thread = ne+str(nthread)
         print thread
         try:
             thread = newthread(nthread,ne,nus,wait)
